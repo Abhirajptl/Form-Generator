@@ -9,7 +9,7 @@
       { "src": "/(.*)", "dest": "frontend" }
     ],
     "env": {
-      "BACKEND_URL": "YOUR_VERCEL_BACKEND_URL", 
+      "BACKEND_URL": "https://form-generator-sand.vercel.app/", 
       "MONGO_URI": "mongodb+srv://patelabhiraj222:Abhi775888@cluster0.labl0.mongodb.net/FormData?retryWrites=true&w=majority&appName=Cluster0" 
     }
   }
