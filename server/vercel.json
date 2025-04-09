@@ -1,17 +1,15 @@
 {
-    "builds": [
-      {
-        "src": "./server.js", 
-        "use": "@vercel/node" 
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)", 
-        "dest": "/server.js" 
-      }
-    ]
-  } 
-  
-
-  
+  "version": 2,
+  "builds": [
+    { "src": "frontend", "use": "@vercel/react" },
+    { "src": "server/server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
+    { "src": "/(.*)", "dest": "frontend" }
+  ],
+  "env": {
+    "BACKEND_URL": "/api", 
+    "MONGO_URI": "mongodb+srv://patelabhiraj222:Abhi775888@cluster0.labl0.mongodb.net/FormData?retryWrites=true&w=majority&appName=Cluster0" 
+  }
+}
